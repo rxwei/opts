@@ -1,0 +1,17 @@
+** LICM
+  - The pass is located in LICM.cpp. It follows the pseudocode described in the
+    appendix.
+  - Function `LICM::doLICM()` contains the main algorithm. 
+  - Function `LICM::isLoopInvariant(Instruction&)` determines if instruction is
+    loop-invariant
+  - Function `LICM::safeToHoise(Instruction&)` determines if instruction is
+    safe to hoist outside the loop body
+
+** ADCE
+  - The pass is located in ADCE.cpp. It follows the pseudocode described in the
+    appendix.
+  - Function `ADCE::doADCE()` contains the main algorithm.
+  - Function `ADCE::isTriviallyLive(Instruction&)` determines if instruction is
+    trivially live
+  - Function `ADCE::markLive(Instruction&)` marks the instruction alive and adds
+    it to the worklist
